@@ -162,8 +162,6 @@ def redraw_window(win, game, player):
       print(f"len(rockets) {len(rockets)}")
       rockets.sprites()[i].rect.center = game.r_pos_speed[i][0]
 
-    print(f"game.r_pos_speed {len(game.r_pos_speed)}")
-    print(f"len(rockets) {len(rockets)}")
     rockets.update()
   
   pygame.display.update()
