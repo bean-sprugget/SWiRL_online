@@ -46,15 +46,13 @@ def threaded_client(conn, p, game_id):
             for i in range(len(data[1])):
               game.r_pos_speed[i][0] = data[1][i]
           elif data == "remove rocket":
-            print("removing rocket")
             game.r_pos_speed.pop(0)
           
           reply = game
           conn.sendall(pickle.dumps(reply))
       else:
         break
-    except error as e:
-      print(e)
+    except:
       break
   
   print("Lost connection")
